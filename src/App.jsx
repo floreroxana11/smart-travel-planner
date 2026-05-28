@@ -31,8 +31,10 @@ import {
   updateExpenseInTrip,
   trySyncPendingOperations,
 } from "./utils/tripsApi";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-const WS_URL = `wss://${window.location.hostname}:3001`;
+const WS_URL = API_BASE_URL.replace("https://", "wss://");
+
 const CHAT_ROOM = "general";
 
 function loadUser() {
@@ -144,7 +146,7 @@ export default function App() {
   async function loadChatHistory(userId) {
     try {
       const response = await fetch(
-        `https://${window.location.hostname}:3001/api/chat/${CHAT_ROOM}/messages`,
+          `${API_BASE_URL}/api/chat/${CHAT_ROOM}/messages`
         {
           headers: {
             "x-user-id": String(userId),

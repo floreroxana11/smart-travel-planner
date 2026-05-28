@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./AdminPanel.css";
 
-const API = `http://${window.location.hostname}:3001/api/admin`;
+const API = `${import.meta.env.VITE_API_BASE_URL}/api/admin`;
 
 export default function AdminPanel({ currentUser }) {
   const [tab, setTab] = useState("observations");

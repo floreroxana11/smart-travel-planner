@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./LoginPage.css";
 
-const API_AUTH_URL = `https://${window.location.hostname}:3001/api/auth`;
+const API_AUTH_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth`;
 
 export default function RegisterPage({ onRegister, onGoLogin }) {
   const [form, setForm] = useState({

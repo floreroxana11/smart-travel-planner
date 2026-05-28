@@ -8,7 +8,7 @@ import {
 } from "./offlineSync";
 import { getCookie, COOKIE_KEYS } from "./cookies";
 
-const API_BASE_URL = `https://${window.location.hostname}:3001/api/trips`;
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api/trips`;
 
 let isSyncInProgress = false;
 
