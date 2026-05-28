@@ -1,0 +1,260 @@
+.page {
+  flex: 1;
+  background: linear-gradient(160deg, #0f172a 0%, #111827 100%);
+  padding: 40px;
+  min-height: calc(100vh - 64px);
+}
+
+.page-heading {
+  margin-bottom: 28px;
+}
+
+.page-heading h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.page-heading p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.88rem;
+  margin-top: 4px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 22px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+thead tr {
+  background: linear-gradient(90deg, #1e3a8a, #1d4ed8);
+}
+
+thead th {
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+tbody td {
+  padding: 14px 18px;
+  color: rgba(255, 255, 255, 0.85);
+  vertical-align: middle;
+}
+
+.td-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination-info {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.page-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--blue-500);
+}
+
+.page-btn.active {
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  border-color: transparent;
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.empty p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 20px;
+  }
+}
+
+.table-wrap table tbody tr {
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: rowAppear 0.5s ease forwards;
+}
+
+.table-wrap table tbody tr:nth-child(1) { animation-delay: 0.08s; }
+.table-wrap table tbody tr:nth-child(2) { animation-delay: 0.16s; }
+.table-wrap table tbody tr:nth-child(3) { animation-delay: 0.24s; }
+.table-wrap table tbody tr:nth-child(4) { animation-delay: 0.32s; }
+.table-wrap table tbody tr:nth-child(5) { animation-delay: 0.40s; }
+
+.table-wrap table tbody tr:hover {
+  transform: scale(1.015);
+  background: rgba(59, 130, 246, 0.08);
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.35);
+}
+
+.table-wrap table tbody tr:hover td {
+  color: #ffffff;
+}
+
+.table-wrap table tbody tr:hover td:nth-child(6) {
+  text-shadow: 0 0 10px rgba(52, 211, 153, 0.9);
+}
+
+@keyframes rowAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 24px;
+  }
+
+  .card-header {
+    padding: 18px 20px;
+  }
+
+  table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px;
+  }
+
+  .page-heading h1 {
+    font-size: 1.35rem;
+  }
+
+  .page-heading p {
+    font-size: 0.82rem;
+  }
+
+  .card-header {
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+  }
+
+  .pagination-controls {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  table {
+    min-width: 900px;
+  }
+
+  .td-actions {
+    flex-wrap: nowrap;
+  }
+}

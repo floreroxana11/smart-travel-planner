@@ -1,0 +1,248 @@
+.hero {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  bottom: -50px;
+  left: -50px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  color: var(--blue-400);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, var(--blue-400), #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+.hero-btn {
+    font-size: 1.3rem;
+    padding: 20px 50px;
+    border-radius: 16px;
+    font-weight: 700;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 780px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 14px;
+}
+
+.feature-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-airplane {
+  position: absolute;
+  top: 120px;
+  left: -80px;
+
+  font-size: 48px;
+  opacity: 0.9;
+
+  animation: flyAcross 12s linear infinite, floatPlane 3s ease-in-out infinite;
+}
+
+@keyframes flyAcross {
+  0% {
+    left: -80px;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    left: 110%;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatPlane {
+  0% { top: 120px; }
+  50% { top: 100px; }
+  100% { top: 120px; }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero p br {
+    display: none;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .hero-airplane {
+    font-size: 38px;
+    top: 90px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 16px;
+    min-height: calc(100vh - 64px);
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.05rem;
+    padding: 16px 24px;
+  }
+
+  .hero-cta {
+    margin-bottom: 40px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .feature-card {
+    padding: 22px 18px;
+  }
+
+  .hero-airplane {
+    font-size: 32px;
+    top: 80px;
+  }
+}

@@ -1,0 +1,256 @@
+.bazinga-page {
+  padding: 40px;
+}
+
+.bazinga-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.bazinga-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.bazinga-subtitle {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 2px;
+}
+
+/* Summary cards */
+.bazinga-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.weight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.weight-card:hover {
+  transform: translateY(-2px);
+}
+
+.weight-card.weight-over {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.weight-card.weight-ok {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+.weight-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.weight-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+/* Progress bar */
+.bazinga-progress-wrap {
+  margin-bottom: 28px;
+}
+
+.bazinga-progress-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.bazinga-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
+  transition: width 0.5s ease;
+}
+
+.bazinga-progress-fill.over {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.bazinga-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Two column layout */
+.bazinga-columns {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Items section */
+.bazinga-items-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.bazinga-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.bazinga-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bazinga-form {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.5), rgba(29, 78, 216, 0.4));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  animation: fadeInUp 0.2s ease both;
+}
+
+.bazinga-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bazinga-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: background 0.15s;
+}
+
+.bazinga-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.bazinga-item-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.bazinga-item-meta {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2px;
+}
+
+.bazinga-item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.bazinga-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.9rem;
+}
+
+.bazinga-empty div {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.bazinga-tips-section {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(29, 78, 216, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.bazinga-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.bazinga-tip {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.bazinga-breakdown {
+  margin-top: 4px;
+}
+
+.bazinga-cat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bazinga-cat-row:last-child {
+  border-bottom: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .bazinga-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .bazinga-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bazinga-page {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bazinga-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

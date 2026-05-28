@@ -1,0 +1,104 @@
+.admin-panel {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-tab {
+  padding: 0.6rem 1.4rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.admin-tab.active {
+  background: #1e293b;
+  color: white;
+  border-color: #1e293b;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.admin-table th {
+  background: #f1f5f9;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #475569;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.admin-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+  color: #e2e8f0;
+}
+
+.admin-table tr.flagged {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.admin-table tr.resolved {
+  background: #f0fdf4;
+  opacity: 0.7;
+}
+
+.badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-warn  { background: #fef3c7; color: #92400e; }
+.badge-ok    { background: #d1fae5; color: #065f46; }
+.badge-admin { background: #ede9fe; color: #5b21b6; }
+.badge-user  { background: #e0f2fe; color: #0369a1; }
+
+.resolve-btn {
+  padding: 0.3rem 0.8rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.resolve-btn:hover { background: #2563eb; }
+
+.log-info {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.admin-empty { color: #22c55e; font-weight: 600; padding: 1rem 0; }
+.admin-loading { color: #94a3b8; padding: 1rem 0; }
+.obs-table-wrap { overflow-x: auto; }

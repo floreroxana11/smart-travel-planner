@@ -1,0 +1,20 @@
+{"roomId":"general","userId":1,"username":"admin","text":"dormi","timestamp":"2026-05-06T21:57:15.205Z","_id":"32mQBUPlBswzSypD"}
+{"roomId":"general","userId":2,"username":"alice","text":"neata","timestamp":"2026-05-07T07:35:34.962Z","_id":"4Ep93JMcVjyF3txU"}
+{"roomId":"general","userId":1,"username":"admin","text":"swalut","timestamp":"2026-05-07T08:50:37.083Z","_id":"55C6F2q8FnO2yQ8t"}
+{"roomId":"general","userId":1,"username":"admin","text":"cf","timestamp":"2026-05-07T08:32:32.527Z","_id":"825UCNZTednT3Kzo"}
+{"roomId":"general","userId":1,"username":"admin","text":"haha","timestamp":"2026-05-06T23:23:54.178Z","_id":"AAmG7wyh3PybNfTu"}
+{"roomId":"general","userId":1,"username":"admin","text":"bn","timestamp":"2026-05-06T21:47:06.175Z","_id":"AHYAwfbkPewi2ge6"}
+{"roomId":"general","userId":2,"username":"alice","text":"bn","timestamp":"2026-05-07T08:34:01.456Z","_id":"IfMxmuZrcXfNwbdR"}
+{"roomId":"general","userId":1,"username":"admin","text":"neata","timestamp":"2026-05-07T07:37:25.400Z","_id":"UVPrnVvpFTILftX7"}
+{"roomId":"general","userId":2,"username":"alice","text":"cf","timestamp":"2026-05-06T21:44:14.460Z","_id":"WoxBm95FvYBueHau"}
+{"roomId":"general","userId":1,"username":"admin","text":"nici eu","timestamp":"2026-05-06T22:05:52.761Z","_id":"XMDUtVB59TZOj0YW"}
+{"roomId":"general","userId":1,"username":"admin","text":"ceau","timestamp":"2026-05-20T23:37:35.312Z","_id":"bzhLsa8whQXEDpJd"}
+{"roomId":"general","userId":2,"username":"alice","text":"nu","timestamp":"2026-05-06T21:57:44.861Z","_id":"i99smVACDNr9WirP"}
+{"roomId":"general","userId":1,"username":"admin","text":"hei","timestamp":"2026-05-06T21:44:04.490Z","_id":"lH4apdaHubytTe9P"}
+{"roomId":"general","userId":2,"username":"alice","text":"fbbf","timestamp":"2026-05-07T08:50:32.287Z","_id":"oxi32cpCsLBhSpsE"}
+{"roomId":"general","userId":2,"username":"alice","text":"super","timestamp":"2026-05-06T22:06:05.322Z","_id":"qkOqtjIe1ABxXuYn"}
+{"roomId":"general","userId":1,"username":"admin","text":"salut","timestamp":"2026-05-06T21:50:43.336Z","_id":"v7PX8Wb7gLGyvLkZ"}
+{"$$indexCreated":{"fieldName":"roomId","unique":false,"sparse":false}}
+{"$$indexCreated":{"fieldName":"timestamp","unique":false,"sparse":false}}
+{"$$indexCreated":{"fieldName":"roomId"}}
+{"$$indexCreated":{"fieldName":"timestamp"}}
